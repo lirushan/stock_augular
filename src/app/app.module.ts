@@ -12,6 +12,7 @@ import { StarsComponent } from './public/stars/stars.component';
 import {RouterModule, Routes} from '@angular/router';
 import { DashboardComponent } from './public/dashboard/dashboard.component';
 import { StockFormComponent } from './stock/stock-form/stock-form.component';
+import {StockService} from "./stock/stock.service";
 
 // 导入路由配置, 配置组件路径
 const routesConfig: Routes = [
@@ -41,7 +42,7 @@ const routesConfig: Routes = [
   ],
   // 通过依赖注入来实例化对象
   // 提供器
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
